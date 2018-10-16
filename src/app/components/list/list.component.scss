@@ -1,0 +1,14 @@
+@import "~src/styles/variables";
+.scroller {
+  max-height: calc(80vh - 100px);
+  overflow-y: scroll;
+  border: solid 3px $secondary;
+  .menu {
+    margin-bottom: calc(20vh - 100px);
+    justify-content: center;
+    li{
+      margin: 0;
+      padding: 1rem;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<div class="scroller"  (scroll)="scrollDown($event)">
+  <ul class="menu">
+    <li *ngFor="let item of data; trackBy: trackById">
+      <ng-container
+        [ngTemplateOutlet]="template"
+        [ngTemplateOutletContext]="{item: item}">
+      </ng-container>
+    </li>
+  </ul>
+</div>

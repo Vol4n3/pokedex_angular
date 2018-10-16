@@ -1,0 +1,17 @@
+<header class="bg-secondary">
+  <div class="mb-1">
+    <a routerLink="/" class="pokemon-title">Pokédex</a>
+  </div>
+  <nav>
+    <ul class="menu text-light">
+      <li class="item"><a class="text-light" routerLink="/">Accueil</a></li>
+      <li class="item"><a class="text-light" routerLink="/pokedex">Pokédex</a></li>
+      <li class="item"><a class="text-light" routerLink="/favorites">Pokémons favories</a></li>
+      <li *ngIf="!isLogged" class="item ml-auto"><a class="text-light" routerLink="/auth/login">Log in</a></li>
+      <li *ngIf="isLogged" class="item ml-auto">
+        <span>Dresseur {{pseudo}} : </span>
+        <span class="pointer" (click)="logout()">Log out</span>
+      </li>
+    </ul>
+  </nav>
+</header>
