@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Les {{ maxPokemon }} Pokémons</h1>
+  <app-list [data]="pokemonsPage" [template]="pokemonCard" (scrollBottom)="nextPage()"></app-list>
+</div>
+<ng-template #pokemonCard let-pokemon="item">
+  <figure class="card" [class.interactible]="isLogged" [class.favorite]="pokemon.isFavorite"
+          (click)="toggleFavorite(pokemon)">
+    <div class="d-flex center">
+      <img width="100" height="100" [src]="pokemon.imageUrl">
+    </div>
+    <figcaption class="pixeled">
+      {{ pokemon.id }}-{{ pokemon.name }}
+    </figcaption>
+  </figure>
+</ng-template>

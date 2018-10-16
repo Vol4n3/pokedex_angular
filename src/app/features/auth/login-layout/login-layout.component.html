@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Connectez vous</h1>
+  <form [formGroup]="loginForm" (submit)="submit()">
+    <input formControlName="pseudo" type="text" class="form-control" name="pseudo" placeholder="pseudo">
+    <button type="submit" class="btn btn-info" [attr.disabled]="(loginForm.invalid) ? 'disabled' : null">Login</button>
+  </form>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Tes pokémons préférés</h1>
+  <app-list *ngIf="favoritesPokemons.length; else noPokemon" [data]="favoritesPokemons" [template]="pokemonCard"></app-list>
+</div>
+<ng-template #pokemonCard let-pokemon="item">
+  <figure class="card" >
+    <div class="d-flex center">
+      <img width="100" height="100" [src]="pokemon.imageUrl">
+    </div>
+    <figcaption class="pixeled">
+      {{pokemon.name}}
+    </figcaption>
+  </figure>
+</ng-template>
+<ng-template #noPokemon>
+  <h3>Ajouter vos pokemons favories sur <a routerLink="/pokedex">cette page</a></h3>
+</ng-template>
