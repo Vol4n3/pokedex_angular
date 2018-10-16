@@ -1,3 +1,152 @@
+html {
+  font-size: 16px;
+}
+@media screen and (max-width: 928px){
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px){
+  html {
+    font-size: 12px;
+  }
+}
 html, body {
+  height: 100%;
+}
 
+body {
+  color: $secondary;
+}
+
+a {
+  color: $info;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  > li {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    &.item{
+      padding: 0.75rem 1rem;
+    }
+  }
+}
+
+figure {
+  padding: 4rem;
+  margin: 0;
+  img {
+    text-align: center;
+  }
+  figcaption {
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
+
+.form-control {
+  background-color: transparent;
+  border: 1px solid $secondary;
+  margin: 0;
+  padding: $padding-input;
+  &.ng-invalid{
+    border-color: $danger;
+  }
+  &.ng-valid{
+    border-color: $info;
+  }
+}
+
+.btn {
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid transparent;
+  padding: $padding-input;
+  cursor: pointer;
+  &.btn-primary {
+    background-color: $primary;
+    color: $secondary;
+  }
+  &.btn-info {
+    background-color: $info;
+    color: $light;
+  }
+  &.btn-secondary {
+    background-color: $secondary;
+    color: $light;
+  }
+  &:disabled,&[disabled]{
+    background-color: $grey;
+    cursor: not-allowed;
+  }
+}
+
+.card {
+  @include card();
+}
+
+.d-flex {
+  display: flex;
+  &.center-x {
+    justify-content: center;
+  }
+  &.center-y {
+    align-items: center;
+  }
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.bg-secondary {
+  background-color: $secondary;
+}
+
+.bg-primary {
+  background-color: $primary;
+}
+
+.text-light {
+  color: white;
+}
+
+.interactible {
+  cursor: pointer;
+  &:before{
+    @include material-icon('star_border');
+    position: absolute;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+  }
+  &:hover:before{
+    opacity: 1;
+  }
+  &.favorite:before {
+    @include material-icon('star');
+    color: $primary;
+    opacity: 1;
+  }
 }

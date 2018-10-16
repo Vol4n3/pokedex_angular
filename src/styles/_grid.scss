@@ -1,0 +1,106 @@
+
+.col-1 {
+  width: 100% * 1 /12;
+}
+
+.col-2, .col-sixth {
+  width: 100% * 2 / 12;
+}
+
+.col-fifth {
+  width: 20%;
+}
+
+.col-3, .col-quarter {
+  width: 25%;
+}
+
+.col-4, .col-third {
+  width: 100% * 4 / 12;
+}
+
+.col-5 {
+  width: 100% * 5 / 12;
+}
+
+.col-6, .col-half {
+  width: 50%;
+}
+
+.col-7 {
+  width: 100% * 7 / 12;
+}
+
+.col-8 {
+  width: 100% * 8 / 12;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 100% * 10 / 12;
+}
+
+.col-11 {
+  width: 100% * 11 / 12;
+}
+
+.col-12 {
+  width: 100%;
+}
+@media screen and (min-width: 769px) {
+
+  .col-desktop-1 {
+    width: 100% * 1 / 12;
+  }
+
+  .col-desktop-2, .col-desktop-sixth {
+    width: 100% * 2 / 12;
+  }
+
+  .col-desktop-fifth {
+    width: 20%;
+  }
+
+  .col-desktop-3, .col-desktop-quarter {
+    width: 25%;
+  }
+
+  .col-desktop-4, .col-desktop-third {
+    width: 100% * 4 / 12;
+  }
+
+  .col-desktop-5 {
+    width: 100% * 5 / 12;
+  }
+
+  .col-desktop-6, .col-desktop-half {
+    width: 50%;
+  }
+
+  .col-desktop-7 {
+    width: 100% * 7 / 12;
+  }
+
+  .col-desktop-8 {
+    width: 100% * 8 / 12;
+  }
+
+  .col-desktop-9 {
+    width: 75%;
+  }
+
+  .col-desktop-10 {
+    width: 100% * 10 / 12;
+  }
+
+  .col-desktop-11 {
+    width: 100% * 11 / 12;
+  }
+
+  .col-desktop-12 {
+    width: 100%;
+  }
+}

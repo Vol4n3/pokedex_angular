@@ -1,0 +1,5 @@
+@mixin material-icon($content) {
+  content: $content;
+  font-family: "Material Icons", sans-serif;
+  display: inline-block;
+}
